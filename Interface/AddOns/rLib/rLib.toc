@@ -1,0 +1,13 @@
+## Interface: 11302
+## Author: zork
+## Title: rLib |cff1a9fc0Classic|r
+## Notes: Zork's addon library.
+## Classic: cocovanana
+
+core.lua
+dragframe.lua
+framefader.lua
+slashcmd.lua
+
+
+chat.lua

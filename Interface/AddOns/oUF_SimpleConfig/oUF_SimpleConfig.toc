@@ -1,0 +1,19 @@
+## Interface: 11302
+## Author: zork
+## Title: oUF_SimpleConfig |cff1a9fc0Classic|r
+## Notes: oUF_Simple config
+## RequiredDeps: rLib
+
+init.lua
+global.lua
+tags.lua
+player.lua
+target.lua
+targettarget.lua
+pet.lua
+focus.lua
+mouseover.lua
+party.lua
+boss.lua
+nameplate.lua
+raid.lua

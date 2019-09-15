@@ -1,0 +1,6 @@
+## Interface: 11302
+## Author: zork
+## Title: rError |cff1a9fc0Classic|r
+## Notes: Blacklisting and redirecting of error messages
+
+core.lua

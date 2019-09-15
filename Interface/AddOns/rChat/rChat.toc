@@ -1,0 +1,7 @@
+## Interface: 11302
+## Author: zork
+## Title: rChat |cff1a9fc0Classic|r
+## Notes: Chat enhancements
+## Classic: cocovanana
+
+core.lua

@@ -1,0 +1,6 @@
+## Interface: 11302
+## Author: zork
+## Title: rRaidManager |cff1a9fc0Classic|r
+## Notes: Simple toolbar for raid management
+
+core.lua

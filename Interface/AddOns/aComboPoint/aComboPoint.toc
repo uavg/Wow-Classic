@@ -1,0 +1,8 @@
+## Interface: 11302
+## Author: cocovanana
+## Title: aComboPoint |cff1a9fc0Classic|r
+## Notes: Combo Points for Zork's interface!
+## OptionalDeps: oUF_SimpleConfig
+
+init.lua
+target.lua
