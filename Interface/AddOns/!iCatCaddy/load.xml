@@ -1,0 +1,11 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+
+<Script  file="badBuffs.lua"/>
+<Script  file="bind.lua"/>
+<Script  file="TabBind.lua"/>
+<Script  file="Doom_CooldownPulse.lua"/>
+<Script  file="Combat.lua"/>
+<Script  file="XGuild.lua"/>
+<Script  file="Miscs.lua"/>
+
+</Ui>

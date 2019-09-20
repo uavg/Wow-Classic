@@ -1,0 +1,7 @@
+## Interface: 11302
+## Title: |cff0088ff!iCatCaddy|r
+## Author: Nixie
+## Notes: Minimal Addons.
+
+load.xml
+
