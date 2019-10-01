@@ -47,3 +47,72 @@ SlashCmdList.GRIDONSCREEN = function()
 	end
 end
 SLASH_GRIDONSCREEN1 = "/align"
+
+-- Disable Combat Text Spam
+LoadAddOn("Blizzard_CombatText")
+
+COMBAT_TEXT_TYPE_INFO["PERIODIC_HEAL"] = {var = nil, show = nil}
+COMBAT_TEXT_TYPE_INFO["HEAL_CRIT"] = {var = nil, show = nil}
+COMBAT_TEXT_TYPE_INFO["HEAL"] = {var = nil, show = nil}
+COMBAT_TEXT_TYPE_INFO["PERIODIC_HEAL_ABSORB"] = {var = nil, show = nil}
+COMBAT_TEXT_TYPE_INFO["HEAL_CRIT_ABSORB"] = {var = nil, show = nil}
+COMBAT_TEXT_TYPE_INFO["HEAL_ABSORB"] = {var = nil, show = nil}
+
+COMBAT_TEXT_TYPE_INFO["DAMAGE_CRIT"] = {var = nil, show = nil}
+COMBAT_TEXT_TYPE_INFO["DAMAGE"] = {var = nil, show = nil}
+COMBAT_TEXT_TYPE_INFO["SPELL_DAMAGE_CRIT"] = {var = nil, show = nil}
+COMBAT_TEXT_TYPE_INFO["SPELL_DAMAGE"] = {var = nil, show = nil}
+
+----------------------------------------------------------------------
+--	Repair automatically (no reload required)
+----------------------------------------------------------------------
+
+do
+
+	-- Repair when suitable merchant frame is shown
+	local function RepairFunc()
+		if IsShiftKeyDown() then return end
+		if CanMerchantRepair() then -- If merchant is capable of repair
+			-- Process repair
+			local RepairCost, CanRepair = GetRepairAllCost()
+			if CanRepair then -- If merchant is offering repair
+				if GetMoney() >= RepairCost then
+					RepairAllItems()
+					-- Show cost summary
+					LeaPlusLC:Print(L["Repaired for"] .. " " .. GetCoinText(RepairCost) .. ".")
+				end
+			end
+		end
+	end
+
+	-- Create event frame
+	local RepairFrame = CreateFrame("FRAME")
+
+	-- Function to setup event
+	local function SetupEvent()
+			RepairFrame:RegisterEvent("MERCHANT_SHOW")
+	end
+
+	-- Event handler
+	RepairFrame:SetScript("OnEvent", RepairFunc)
+
+end
+
+
+
+----------------------------------------------------------------------
+--	Disable sticky chat
+----------------------------------------------------------------------
+
+-- These taint if set to anything other than nil
+ChatTypeInfo.WHISPER.sticky = nil
+ChatTypeInfo.BN_WHISPER.sticky = nil
+ChatTypeInfo.CHANNEL.sticky = nil
+
+
+----------------------------------------------------------------------
+--	BlueShaman
+----------------------------------------------------------------------
+
+RAID_CLASS_COLORS["SHAMAN"] = CreateColor(0, 0.44, 0.87, 1);
+RAID_CLASS_COLORS["SHAMAN"].colorStr = RAID_CLASS_COLORS["SHAMAN"]:GenerateHexColor()

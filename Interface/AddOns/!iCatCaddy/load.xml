@@ -7,5 +7,7 @@
 <Script  file="Combat.lua"/>
 <Script  file="XGuild.lua"/>
 <Script  file="Miscs.lua"/>
+<Script  file="Lunch.lua"/>
+<Script  file="MovableFrames.lua"/>
 
 </Ui>

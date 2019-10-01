@@ -44,8 +44,8 @@ L.C.party = {
     health = {
       enabled = true,
       point = {"RIGHT",-2,0},
-      size = 16,
-      tag = "",
+      size = 14,
+      tag = "[oUF_Simple:health]"
     },
     debuffHighlight = true,
   },

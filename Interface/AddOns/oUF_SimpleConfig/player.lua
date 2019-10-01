@@ -36,6 +36,7 @@ L.C.player = {
     colorClass = true,
     colorHealth = true,
     colorThreat = false,
+    frequentUpdates = true,
     name = {
       enabled = true,
       points = {

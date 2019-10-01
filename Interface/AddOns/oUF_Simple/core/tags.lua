@@ -25,7 +25,8 @@ oUF.Tags.Methods["oUF_Simple:health"] = function(unit)
   if(UnitIsDead(unit) or UnitIsGhost(unit)) then
     return "|cff999999Dead|r"
   end
-  return L.F.NumberFormat(UnitHealth(unit)).."|ccccccccc"
+  --return L.F.NumberFormat(UnitHealth(unit)).."|ccccccccc"
+  return UnitHealth(unit).."|ccccccccc"
 end
 --tag event: oUF_Simple:health
 oUF.Tags.Events["oUF_Simple:health"] = "UNIT_HEALTH UNIT_MAXHEALTH UNIT_CONNECTION"

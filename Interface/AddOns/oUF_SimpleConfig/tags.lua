@@ -54,9 +54,32 @@ L.C.tagMethods["oUF_SimpleConfig:happiness"] = function(unit)
   return happyString
 end
 
+--tag method: oUF_SimpleConfig:RealMobHealth
+L.C.tagMethods["oUF_SimpleConfig:RealMobHealth"] = function(unit)
+  local health = ""
+  if not UnitIsConnected(unit) then
+    return "|cff999999Offline|r"
+  end
+  if(UnitIsDead(unit) or UnitIsGhost(unit)) then
+    return "|cff999999Dead|r"
+  end
+
+  if RealMobHealth and RealMobHealth.UnitHasHealthData(unit)then
+    health, _ = RealMobHealth.GetUnitHealth(unit)
+  elseif UnitHealthMax(unit) == 100 then
+    health = ""
+  else
+    health = UnitHealth(unit)
+  end
+  return health.."|ccccccccc"
+end
+
+--tag event: oUF_SimpleConfig:RealMobHealth
+L.C.tagEvents["oUF_SimpleConfig:RealMobHealth"] = "UNIT_HEALTH UNIT_MAXHEALTH UNIT_CONNECTION"
 --tag event: oUF_Simple:status
 L.C.tagEvents["oUF_SimpleConfig:status"] = "PLAYER_REGEN_DISABLED PLAYER_REGEN_ENABLED PLAYER_UPDATE_RESTING"
 --tag event: oUF_Simple:status
 L.C.tagEvents["oUF_SimpleConfig:classification"] = "UNIT_CLASSIFICATION_CHANGED"
 --tag event: oUF_Simple:happiness
 L.C.tagEvents["oUF_SimpleConfig:happiness"] = "UNIT_HAPPINESS"
+

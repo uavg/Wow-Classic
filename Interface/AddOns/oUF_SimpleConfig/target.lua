@@ -38,6 +38,7 @@ L.C.target = {
     colorHealth = true,
     colorThreat = false,
     colorThreatInvers = true,
+    frequentUpdates = true,
     name = {
       enabled = true,
       points = {
@@ -51,7 +52,7 @@ L.C.target = {
       enabled = true,
       point = {"RIGHT",-2,0},
       size = 16,
-      tag = "",
+      tag = "[oUF_SimpleConfig:RealMobHealth]"
     },
     debuffHighlight = true,
   },
