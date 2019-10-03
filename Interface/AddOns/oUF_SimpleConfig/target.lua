@@ -52,7 +52,7 @@ L.C.target = {
       enabled = true,
       point = {"RIGHT",-2,0},
       size = 16,
-      tag = "[oUF_SimpleConfig:RealMobHealth]"
+      tag = "[oUF_SimpleConfig:RealMobHealth]",
     },
     debuffHighlight = true,
   },

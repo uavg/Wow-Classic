@@ -35,17 +35,3 @@ EventFrame:SetScript("OnEvent", function(self, event, ...)
     merchantOpen = false
   end
 end)
-
--- Only show nameplates when in combat
-
-local np = CreateFrame("Frame") do
-  np:RegisterEvent("PLAYER_REGEN_ENABLED")
-  np:RegisterEvent("PLAYER_REGEN_DISABLED")
-  np:SetScript("OnEvent", function(self, event)
-      if event == "PLAYER_REGEN_ENABLED" then
-          SetCVar("nameplateShowEnemies", 0)  
-      elseif event == "PLAYER_REGEN_DISABLED" then
-          SetCVar("nameplateShowEnemies", 1)  
-      end
-  end)
-end

@@ -49,7 +49,7 @@ L.C.raid = {
       },
       size = 16,
       align = "CENTER",
-      tag = "[name][oUF_Simple:role]",
+      tag = "[oUF_Simple:leader][oUF_Simple:assistant][oUF_Simple:raidfunction][oUF_Simple:raidname]",
     },
     debuffHighlight = true,
   },

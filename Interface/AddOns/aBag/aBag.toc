@@ -22,3 +22,5 @@ modules\bank.lua
 
 core\bindings.lua
 core\init.lua
+
+SortBags.lua
